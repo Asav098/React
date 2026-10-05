@@ -1,9 +1,9 @@
-import Button from "./Button.jsx"
-import ProfilePicture from "./ProfilePicture.jsx"
+
+import Counter from './Counter.jsx'
 function App() {
-    return(
-      <ProfilePicture/>
-    )
+  return(
+  <Counter/>
+  );
 }
 
 export default App
