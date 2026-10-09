@@ -1,0 +1,38 @@
+body{
+  margin:0px;
+  background:linear-gradient(rgb(52, 134, 241),white);
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+}
+
+.colorPicCont{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+h1{
+  margin:50px;
+  font-size:3rem;
+}
+.ColorDisplay{
+  width:300px;
+  height:300px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border:5px solid rgba(0, 0, 0, 0.39);
+  border-radius:25px;
+  transition:0.25s ease;
+  margin-bottom:25px;
+}
+label{
+  font-weight:bold;
+  font-size:1.5rem;
+  margin-bottom:10px;
+}
+input[type="color"]{
+  width:75px;
+  height:75px;
+  padding:5px;
+  border-radius:50%;
+}
