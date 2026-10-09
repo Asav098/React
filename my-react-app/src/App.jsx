@@ -1,9 +1,10 @@
-
-import Counter from './Counter.jsx'
+import MyComponent from './MyComponent.jsx'
 function App() {
   return(
-  <Counter/>
-  );
+  <div>
+  <h1>hi</h1>
+  <MyComponent/>
+  </div>)
 }
 
 export default App

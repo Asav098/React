@@ -1,30 +1,55 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
+
 function MyComponent(){
-    const [name, setName] = useState("GUEST");
-    const [age,setAge] = useState(0);
-    const [isEmployed,setisEmployed] = useState(false);
-    const updateName = ()=>{
-        setName("Bajaarala");
+
+    const[name,setName] = useState("Guest");
+    const [quantity,setQuantity] = useState(0);
+    const [comment,setComment]= useState("");
+    const [payment,setPay]= useState("");
+    const [shipping,setShipping]= useState("");
+    function handleNameChange(event){
+        setName(event.target.value);
     }
-    const incage = ()=>{
-        setAge(age + 1);
+    function handleCommentChange(event){
+        setComment(event.target.value);
     }
-    const toggleEmployedStatus = () => {
-        setisEmployed(!isEmployed);
+    function handleQuantityChange(event){
+        setQuantity(event.target.value);
     }
-    return(
-        <div>
-            <p>Name: {name} </p>
-            <button onClick={updateName}>Set Name</button>
+    function handlePaymentChange(event){
+        setPay(event.target.value);
+    }
+    function handleShippingChange(event){
+        setShipping(event.target.value);
+    }
+    return (
+    <div>
+        <input value={name} onChange={handleNameChange}></input>
+        <p>Name: {name}</p>
+        <input value={quantity} type= "Number" onChange={handleQuantityChange}></input>
+        <p>Quantity: {quantity}</p>
+        <textarea value={comment} onChange={handleCommentChange} placeholder="Delivery instructions pls" rows="5"></textarea>
+        <p>Comment : {comment}</p>
 
-            <p>Age: {age} </p>
-            <button onClick={incage}>Increment age</button>
-
-            <p>Is employed? : {isEmployed ? "Yes": "No"} </p>
-            <button onClick={toggleEmployedStatus}>Employed or not?</button>
-
-        </div>
-    )
-
+        <select value={payment} onChange={handlePaymentChange}>
+            <option value="">select an option</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="Giftcard">Giftcard</option>
+        </select>
+        <p>Payment : {payment}</p>
+        <label>
+            Pick Up
+            <input type="radio" value="Pick up"
+            checked={shipping ==="Pick up" } onChange={handleShippingChange}>
+            </input>
+        </label>
+        <label>
+            Delivery
+            <input type="radio" value="Delivery"
+            checked={shipping ==="Delivery" } onChange={handleShippingChange}></input>
+        </label>
+        <p>Shipping : {shipping}</p>
+    </div>);
 }
 export default MyComponent
