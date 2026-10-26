@@ -1,7 +1,8 @@
-import MyComponent from './MyComponent.jsx'
+import ComponentA from './ComponentA.jsx'
+
 function App() {
   return(
-    <MyComponent/>
+    <ComponentA/>
   )
 }
 
