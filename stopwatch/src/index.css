@@ -1,0 +1,44 @@
+
+body{
+  background-color:rgba(3, 1, 41, 0.733);
+  color:whitesmoke;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+}
+
+
+.stopWatch{
+  display:flex;
+  flex-direction:column;
+  border: 5px solid;
+  background-color:azure;
+  padding:30px;
+}
+
+.display{
+  font-size:5rem;
+  font-family:monospace;
+  color:rgb(0, 20, 73);
+  text-shadow:2px 2px 2px grey;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+
+.controls{
+  display:flex;
+  gap:10px;
+
+}
+.controls button{
+  font-size:1.5rem;
+  font-weight:bold;
+  padding:10px 20px;
+  margin:5px;
+  min-width:125px;
+  border:none;
+  cursor:pointe;
+}
